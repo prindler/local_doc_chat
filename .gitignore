@@ -171,4 +171,4 @@ cython_debug/
 .pypirc
 
 # dev data
-data/
+/data/
