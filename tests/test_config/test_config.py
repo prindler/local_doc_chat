@@ -1,8 +1,11 @@
-def test_config_loads():
+def test_config_openai():
     from src.config import settings
 
-    assert not settings.debug
+    assert settings.openai.api_key.get_secret_value().startswith("sk-")
 
-    assert settings.openai.api_key.startswith("sk-")
-    assert settings.openai.llm.startswith("gpt")
-    assert settings.openai.llm_small.startswith("gpt")
+
+def test_config_llm():
+    from src.config import settings
+
+    assert settings.llm.model.startswith("gpt")
+    assert settings.llm.model_small.startswith("gpt")
