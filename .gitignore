@@ -172,3 +172,4 @@ cython_debug/
 
 # dev data
 /data/
+.DS_Store
